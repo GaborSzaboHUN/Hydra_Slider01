@@ -52,12 +52,19 @@ html {
   display: none;
 }
 .slideshow .slider .item img {
-  /* min-width: 101%; */
-  height: 101%;
+  min-width: 101%;
+  min-height: 101%;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+@media (max-width: 525px) {
+  .slideshow .slider .item img {
+    min-width: unset;
+    min-height: unset;
+    height: 101%;
+  }
 }
 .slideshow .slick-dots {
   position: fixed;
